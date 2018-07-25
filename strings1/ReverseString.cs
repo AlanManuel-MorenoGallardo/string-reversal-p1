@@ -10,16 +10,15 @@ namespace strings1
     {
         public string reverse(string input)
         {
-            int strLength = input.Length - 1;
-            List<string> stringtoreverse = new List<string>();
-            while (strLength >= 0)
+            List<string> chars = new List<string>();
+            
+            for(int i = 0; i <= input.Length - 1; i++)
             {
-                stringtoreverse.Add(input.Substring(strLength - 1, strLength));
-                strLength--;
+                string get = input.Substring(i, i - 1);
+                chars.Add(get);
             }
-            string final = string.Join(",", stringtoreverse.ToArray());
 
-            return final;
+            return string.Join("", chars);
         }
 
 
