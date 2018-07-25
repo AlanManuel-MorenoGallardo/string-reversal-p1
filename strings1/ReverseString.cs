@@ -12,10 +12,10 @@ namespace strings1
         {
             List<string> chars = new List<string>();
             
-            for(int i = 0; i <= input.Length - 1; i++)
+            for(int i = input.Length - 1; i >= 0; i--)
             {
-                string get = input.Substring(i, i - 1);
-                chars.Add(get);
+                char get = input[i];
+                chars.Add(get.ToString());
             }
 
             return string.Join("", chars);
